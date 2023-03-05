@@ -51,24 +51,15 @@ with zipfile.ZipFile(args.input_path) as archive:
 
             # loop over each line in the inner file
             for line in f:
-                
                 tweet = json.loads(line)
                 
                 # convert text to lower case
                 text = tweet['text'].lower()
 
-                # search hashtags
-                # IDEA:
-                #      - check key by if key_name in dict_name
-                #      - remember tweet['place'] is also a dict, need to enter 2 key
-                #      - also ignore the one with empty country code
-                #      - check if 'place' key even exist
-                #      - edit output too
-
+                # Loop through the hashtags
                 for hashtag in hashtags:
                     lang = tweet['lang']
                     if hashtag in text:
-                        # search country
                         if tweet is not None:
                             if 'place' in tweet:
                                 place = tweet['place']

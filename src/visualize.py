@@ -52,7 +52,7 @@ temp = range(len(top_10_key))
 
 plt.bar(temp, top_10_val, color='red', alpha=0.5)
 
-plt.xticks(positions, top_10_key)
+plt.xticks(temp, top_10_key)
 
 plt.savefig('test.png')
 """

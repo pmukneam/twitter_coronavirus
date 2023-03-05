@@ -71,11 +71,11 @@ print(args.key)
 if re.search('.lang', args.input_path):
     plot_title = "Counting Language Code in GeoTwitter from 2020 on" + ' ' + args.key# unicode_key 
     x_label = "Language Code" + args.key
-    save_file_name = "lang_1homehmoemohmeohoeohmeohm" + args.key + ".png"
+    save_file_name = "lang_correct" + args.key + ".png"
 else:
     plot_title = "Counting Country Code in GeoTwitter from 2020 on" + ' ' + args.key
     x_label = "Country Code"
-    save_file_name = "country_sdfsdf" + args.key + ".png"
+    save_file_name = "country_correct" + args.key + ".png"
 
 
 plt.title(plot_title, fontproperties=korea_font)

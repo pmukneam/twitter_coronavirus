@@ -7,8 +7,8 @@ Our findings are presented in the following graphs:
 ## #코로나바이러스
 
 <p float="left">
-  <img src="lang_#코로나바이러스.png" width=50% />
-  <img src="country__#코로나바이러스.png" width=50% />
+  <img src="lang_%23코로나바이러스.png" width=50% />
+  <img src="country_%23코로나바이러스.png" width=50% />
 </p>
 
 The two plots are correlated, given that the hashtag we are analyzing is in Korean. As expected, the majority of tweets originated from Korea. However, there were also some number of English tweets, as well as some unidentified languages.

@@ -42,7 +42,26 @@ sorted_val, sorted_key = zip(*sorted(zip(val_arr, key_arr)))
 top_10_val = sorted_val[-10:]
 top_10_key = sorted_key[-10:]
 
-plt.bar(top_10_key, top_10_val)
+import pandas as pd
+
+# create a sample DataFrame
+data = {'name': list(top_10_key),
+        'value': list(top_10_val)}
+df = pd.DataFrame(data)
+
+# sort the DataFrame by 'value' in descending order
+df_sorted = df.sort_values('value', ascending=True)
+
+# plot the bar chart
+plt.bar(df_sorted['name'], df_sorted['value'])
+
+# add axis labels and title
+plt.xlabel('Name')
+plt.ylabel('Value')
+plt.title('Sorted Bar Chart')
+
+# show the plot
+plt.show()
 
 
 plt.savefig('top_10_countries.png')

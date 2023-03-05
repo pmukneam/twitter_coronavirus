@@ -50,11 +50,11 @@ print(top_10_key)
 
 temp = range(len(top_10_key))
 
-plt.bar(top_10_key, top_10_val, color='red', alpha=0.5)
+plt.bar(temp, top_10_val, color='red', tick_label=top_10_key)
 
 #plt.xticks(temp, top_10_key)
 
-plt.savefig('test.png')
+plt.savefig('test2.png')
 """
 import pandas as pd
 

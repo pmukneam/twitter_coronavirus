@@ -11,6 +11,9 @@ args = parser.parse_args()
 # imports
 import os
 import json
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
 from collections import Counter,defaultdict
 
 # open the input path
@@ -24,5 +27,43 @@ if args.percent:
 
 # print the count values
 items = sorted(counts[args.key].items(), key=lambda item: (item[1],item[0]), reverse=True)
+
+key_arr = []
+val_arr = []
+
 for k,v in items:
-    print(k,':',v)
+    # print(k,':',v)
+    key_arr.append(k)
+    val_arr.append(v)
+
+# sort arr
+sorted_val, sorted_key = zip(*sorted(zip(val_arr, key_arr)))
+
+top_10_val = sorted_val[-10:]
+top_10_key = sorted_key[-10:]
+
+plt.bar(list(top_10_key), list(top_10_val))
+plt.show()
+
+plt.savefig('top_10_countries.png')
+
+"""
+# plot the bar
+positions = range(len(top_10_val))
+
+# plot bar graph
+plt.barh(positions, top_10_val)
+# plt.barh
+
+# replace axis label
+plt.xticks(positions, top_10_key)
+
+plt.title('My Bar Graph')
+
+plt.xlabel('key')
+plt.ylabel('count')
+
+plt.tight_layout()
+plt.show()
+
+"""

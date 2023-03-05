@@ -42,8 +42,8 @@ sorted_val, sorted_key = zip(*sorted(zip(val_arr, key_arr)))
 top_10_val = sorted_val[-10:]
 top_10_key = sorted_key[-10:]
 
-plt.bar(list(top_10_key), list(top_10_val))
-plt.show()
+plt.bar(top_10_key, top_10_val)
+
 
 plt.savefig('top_10_countries.png')
 

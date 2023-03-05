@@ -12,6 +12,7 @@ args = parser.parse_args()
 import os
 import json
 import matplotlib
+import re
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from collections import Counter,defaultdict
@@ -32,7 +33,6 @@ key_arr = []
 val_arr = []
 
 for k,v in items:
-    # print(k,':',v)
     key_arr.append(k)
     val_arr.append(v)
 
@@ -48,50 +48,23 @@ top_10_key = list(top_10_key)
 print(top_10_val)
 print(top_10_key)
 
+# bar plot
 temp = range(len(top_10_key))
 
 plt.bar(temp, top_10_val, color='red', tick_label=top_10_key)
 
-#plt.xticks(temp, top_10_key)
+print(args.input_path)
+print(args.key)
 
-plt.savefig('test2.png')
-"""
-import pandas as pd
 
-# create a sample DataFrame
-data = {'name': list(top_10_key),
-        'value': list(top_10_val)}
-df = pd.DataFrame(data)
+#Label based on file
+if re.search('.lang', args.input_path):
+    plt.title("Counting Language Code in GeoTwitter from 2020 on" + ' ' +  args.key)
+    plt.xlabel("Language Code")
+else:
+    plt.title("Counting Country Code in GeoTwitter from 2020 on" + ' ' +  args.key)
+    plt.xlabel("Country Code")
 
-# sort the DataFrame by 'value' in descending order
-df_sorted = df.sort_values('value', ascending=True)
+plt.ylabel("Counts")
 
-# plot the bar chart
-plt.bar(df_sorted['name'], df_sorted['value'])
-
-# add axis labels and title
-plt.xlabel('Name')
-plt.ylabel('Value')
-plt.title('Sorted Bar Chart')
-
-# show the plot
-plt.show()
-"""
-"""
-
-# plot bar graph
-plt.bar(positions, sorted(list(top_10_val)))
-# plt.barh
-
-# replace axis label
-plt.xticks(positions, list(top_10_key))
-
-plt.title('My Bar Graph')
-
-plt.xlabel('key')
-plt.ylabel('count')
-
-plt.tight_layout()
-plt.savefig('test.png')
-
-"""
+plt.savefig('test3.png')

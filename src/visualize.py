@@ -57,7 +57,7 @@ print(args.input_path)
 print(args.key)
 
 temp = args.key
-unicode_key = temp.encode('unicode_escape').decode('utf-8')
+unicode_key = temp.encode('euc-kr').decode('euc-kr')
 
 #Change variable based on file
 if re.search('.lang', args.input_path):

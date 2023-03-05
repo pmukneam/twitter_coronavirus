@@ -56,18 +56,20 @@ plt.bar(temp, top_10_val, color='red', tick_label=top_10_key)
 print(args.input_path)
 print(args.key)
 
-temp = args.key
-unicode_key = temp.encode('euc-kr').decode('euc-kr')
+#temp = args.key
+#unicode_key = temp.encode('euc-kr').decode('euc-kr')
 
 #Change variable based on file
 if re.search('.lang', args.input_path):
-    plot_title = "Counting Language Code in GeoTwitter from 2020 on" + ' ' + unicode_key 
-    x_label = "Language Code" + unicode_key
+    plot_title = "Counting Language Code in GeoTwitter from 2020 on" + ' ' + args.key# unicode_key 
+    x_label = "Language Code" + args.key
     save_file_name = "lang_" + args.key + ".png"
 else:
-    plot_title = "Counting Country Code in GeoTwitter from 2020 on" + ' ' + unicode_key 
+    plot_title = "Counting Country Code in GeoTwitter from 2020 on" + ' ' + args.key
     x_label = "Country Code"
     save_file_name = "country_" + args.key + ".png"
+
+plt.rcParams['font.family'] = 'adobe-korea1'
 
 plt.title(plot_title)
 plt.xlabel(x_label)

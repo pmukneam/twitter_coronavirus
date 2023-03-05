@@ -42,6 +42,15 @@ sorted_val, sorted_key = zip(*sorted(zip(val_arr, key_arr)))
 top_10_val = sorted_val[-10:]
 top_10_key = sorted_key[-10:]
 
+top_10_val = list(top_10_val)
+top_10_key = list(top_10_key)
+
+print(top_10_val)
+print(top_10_key)
+
+plt.bar(range(len(top_10_key)), sorted(top_10_val), color='red', alpha=0.5)
+plt.savefig('test.png')
+"""
 import pandas as pd
 
 # create a sample DataFrame
@@ -62,20 +71,15 @@ plt.title('Sorted Bar Chart')
 
 # show the plot
 plt.show()
-
-
-plt.savefig('top_10_countries.png')
-
 """
-# plot the bar
-positions = range(len(top_10_val))
+"""
 
 # plot bar graph
-plt.barh(positions, top_10_val)
+plt.bar(positions, sorted(list(top_10_val)))
 # plt.barh
 
 # replace axis label
-plt.xticks(positions, top_10_key)
+plt.xticks(positions, list(top_10_key))
 
 plt.title('My Bar Graph')
 
@@ -83,6 +87,6 @@ plt.xlabel('key')
 plt.ylabel('count')
 
 plt.tight_layout()
-plt.show()
+plt.savefig('test.png')
 
 """

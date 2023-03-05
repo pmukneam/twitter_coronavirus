@@ -62,7 +62,7 @@ unicode_key = temp.encode('unicode_escape').decode('utf-8')
 #Change variable based on file
 if re.search('.lang', args.input_path):
     plot_title = "Counting Language Code in GeoTwitter from 2020 on" + ' ' + unicode_key 
-    x_label = "Language Code"
+    x_label = "Language Code" + unicode_key
     save_file_name = "lang_" + args.key + ".png"
 else:
     plot_title = "Counting Country Code in GeoTwitter from 2020 on" + ' ' + unicode_key 

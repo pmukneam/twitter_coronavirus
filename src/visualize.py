@@ -17,6 +17,14 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from collections import Counter,defaultdict
 
+#Fix font
+
+import matplotlib.font_manager as fm
+
+font_path = 'fonts/NanumGothic-Regular.ttf'
+korea_font = fm.FontProperties(fname=font_path)
+
+
 # open the input path
 with open(args.input_path) as f:
     counts = json.load(f)
@@ -63,16 +71,15 @@ print(args.key)
 if re.search('.lang', args.input_path):
     plot_title = "Counting Language Code in GeoTwitter from 2020 on" + ' ' + args.key# unicode_key 
     x_label = "Language Code" + args.key
-    save_file_name = "lang_asdfasdf" + args.key + ".png"
+    save_file_name = "lang_1homehmoemohmeohoeohmeohm" + args.key + ".png"
 else:
     plot_title = "Counting Country Code in GeoTwitter from 2020 on" + ' ' + args.key
     x_label = "Country Code"
     save_file_name = "country_sdfsdf" + args.key + ".png"
 
-plt.rcParams['font.family'] = 'adobe-korea1'
 
-plt.title(plot_title)
-plt.xlabel(x_label)
+plt.title(plot_title, fontproperties=korea_font)
+plt.xlabel(x_label, fontproperties=korea_font)
 plt.ylabel("Counts")
 
 plt.savefig(save_file_name)

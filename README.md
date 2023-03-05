@@ -1,4 +1,4 @@
-# Coronavirus: Twitter Hashtag Analysis
+# Exploring COVID-19 Tweets
 
 In this project, we analyze aspects of tweets with the hashtags `#coronavirus` and `#코로나바이러스` from 2020. Specifically, we investigate the distribution of Twitter user countries and the languages used in these tweets. We focus on the top 10 countries and languages in our analysis.
 

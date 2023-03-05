@@ -48,7 +48,7 @@ top_10_key = list(top_10_key)
 print(top_10_val)
 print(top_10_key)
 
-plt.bar(range(len(top_10_key)), sorted(top_10_val), color='red', alpha=0.5)
+plt.bar(range(len(top_10_key)), top_10_val, color='red', alpha=0.5)
 plt.savefig('test.png')
 """
 import pandas as pd

@@ -16,8 +16,8 @@ The two plots are correlated, given that the hashtag we are analyzing is in Kore
 ## #coronavirus 
 
 <p float="left">
-  <img src="lang_%23coronavirus.png" width=100 />
-  <img src="country_%23coronavirus.png" width=100 />
+  <img src="lang_%23coronavirus.png" width=49% />
+  <img src="country_%23coronavirus.png" width=49% />
 </p>
 
 Unlike the previous hashtag, `#coronavirus` was more widely used in geo-tweets from 2020. We observe that the majority of tweets were from the United States, followed by India and the United Kingdom. While English was the most commonly used language, Spanish and other identified languages were also present.

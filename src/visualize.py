@@ -56,15 +56,21 @@ plt.bar(temp, top_10_val, color='red', tick_label=top_10_key)
 print(args.input_path)
 print(args.key)
 
-
-#Label based on file
+#Change variable based on file
 if re.search('.lang', args.input_path):
-    plt.title("Counting Language Code in GeoTwitter from 2020 on" + ' ' +  args.key)
-    plt.xlabel("Language Code")
+    plot_title = "Counting Language Code in GeoTwitter from 2020 on" + ' ' +  args.key
+    x_label = "Language Code"
+    save_file_name = "lang_" + args.key + ".png"
 else:
-    plt.title("Counting Country Code in GeoTwitter from 2020 on" + ' ' +  args.key)
-    plt.xlabel("Country Code")
+    plot_title = "Counting Country Code in GeoTwitter from 2020 on" + ' ' +  args.key
+    x_label = "Country Code"
+    save_file_name = "country_" + args.key + ".png"
 
+
+
+
+plt.title(plot_title)
+plt.xlabel(x_label)
 plt.ylabel("Counts")
 
-plt.savefig('test3.png')
+plt.savefig(save_file_name)

@@ -24,6 +24,4 @@ Unlike the previous hashtag, `#coronavirus` was more widely used in geo-tweets f
 
 ## Conclusion
 
-In this project, we analyzed geo-tweets with the hashtags `#coronavirus` and `#코로나바이러스` from 2020, focusing on the distribution of Twitter user countries and the languages used in these tweets. Our findings show that the hashtags were widely used in tweets from around the world, with `#coronavirus` being more popular. The majority of tweets for `#코로나바이러스` were from Korea, while the majority of tweets for `#coronavirus` were from the United States, India, and the United Kingdom. English was the most commonly used language for both hashtags.
-
-Overall, this analysis provides insights into how Twitter users across the world engaged with the coronavirus pandemic in 2020. It highlights the importance of language in understanding social media trends and can inform future studies on the use of Twitter during global health crises.
+In this project, we analyzed geo-tweets with the hashtags `#coronavirus` and `#코로나바이러스` from 2020, focusing on the distribution of Twitter user countries and the languages used in these tweets. The majority of tweets for `#코로나바이러스` were from Korea, while the majority of tweets for `#coronavirus` were from the United States, India, and the United Kingdom. English was the most commonly used language for both hashtags.

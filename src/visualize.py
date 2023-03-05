@@ -70,7 +70,7 @@ print(args.key)
 #Change variable based on file
 if re.search('.lang', args.input_path):
     plot_title = "Counting Language Code in GeoTwitter from 2020 on" + ' ' + args.key# unicode_key 
-    x_label = "Language Code" + args.key
+    x_label = "Language Code"
     save_file_name = "lang_correct" + args.key + ".png"
 else:
     plot_title = "Counting Country Code in GeoTwitter from 2020 on" + ' ' + args.key
